@@ -1,0 +1,18 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "parcel": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "Didas Mbalanya <didas@youverify.co>",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "1.12.4"
+  },
+  "devDependencies": {
+    "typescript": "4.1.3"
+  }
+}
