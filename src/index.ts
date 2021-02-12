@@ -1,17 +1,13 @@
-import axios from "axios";
+import { User } from "./models/User";
 
-axios
-  .post("http://localhost:3000/users", {
-    name: "Dex",
-    age: 20,
-  })
-  .then((data) => {
-    console.log("\n\n>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<\n\n");
-    console.log(data);
-    console.log("\n\n>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<\n\n");
-  })
-  .catch((e) => {
-    console.log("\n\n>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<\n\n");
-    console.log(e);
-    console.log("\n\n>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<\n\n");
-  });
+const user = new User({ name: "Jask" });
+
+user.on("change", () => console.log("User was changed"));
+
+user.set({ name: "joey" });
+
+
+console.log('\n\n>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<\n\n')
+console.log(user)
+console.log('\n\n>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<\n\n')
+
